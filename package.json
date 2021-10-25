@@ -1,0 +1,10 @@
+{
+  "name": "@chec/sendgrid-integration",
+  "version": "0.1.0",
+  "description": "Powers custom email templates for Chec using an integration with SendGrid",
+  "main": "index.js",
+  "repository": "git@github.com:chec/sendgrid-integration.git",
+  "author": "Robbie Averill <robbie@chec.io>",
+  "license": "Proprietary",
+  "private": true
+}
