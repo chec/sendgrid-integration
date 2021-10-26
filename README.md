@@ -34,6 +34,13 @@ The initial setup process does the following:
   a template ID for each template was provided in the integration's config
 * Once templates are created in SendGrid, update the integration's config in the Chec API with the new template IDs
 
+### Templates
+
+See the `templates` directory, and the corresponding webhook event name (e.g. `orders.create`) for an HTML template
+and JSON test data dump for each transactional template. These can be updated at any time, just make sure you've
+tested them in the SendGrid Design Library first. Updating these files will not affect any existing integrations
+that have been installed, only new ones.
+
 ## Standard runs
 
 During a standard run of this integration, the following will happen:
