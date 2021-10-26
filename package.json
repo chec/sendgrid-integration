@@ -6,5 +6,8 @@
   "repository": "git@github.com:chec/sendgrid-integration.git",
   "author": "Robbie Averill <robbie@chec.io>",
   "license": "Proprietary",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@chec/webhook-verifier": "^1.0.1"
+  }
 }
