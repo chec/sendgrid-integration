@@ -8,6 +8,8 @@
   "license": "Proprietary",
   "private": true,
   "dependencies": {
-    "@chec/webhook-verifier": "^1.0.1"
+    "@chec/webhook-verifier": "^1.0.1",
+    "@sendgrid/client": "^7.5.0",
+    "@sendgrid/mail": "^7.5.0"
   }
 }
