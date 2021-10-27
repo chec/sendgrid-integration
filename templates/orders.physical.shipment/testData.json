@@ -39,7 +39,18 @@
         "fulfilled_quantity": 1,
         "total_quantity": 1
       }
-    ]
+    ],
+    "customer": {
+      "id": "cstmr_7ZAMo1Q9ZxoNJ4",
+      "external_id": null,
+      "firstname": "Leslie",
+      "lastname": "Lawless",
+      "email": "some.customer.email@example.com",
+      "phone": null,
+      "meta": [],
+      "created": 1634768264,
+      "updated": 1634768264
+    }
   },
   "merchant": {
     "id": 12345,
