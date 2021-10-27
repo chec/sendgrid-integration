@@ -131,6 +131,7 @@ module.exports = async function handler(request, context) {
       // Format for the API
       const integrationConfig = {
         ...integration.config,
+        // Converts from [{event: 'foo', id: 'a-b-c'},...] to {foo: 'a-b-c', ...}
         templates: templateIds.reduce((acc, value) => (acc[value.event] = value.id, acc), {}),
       };
       // Update in the API
