@@ -7,9 +7,15 @@
   "author": "Robbie Averill <robbie@chec.io>",
   "license": "Proprietary",
   "private": true,
+  "scripts": {
+    "build": "ncc build index.js -o dist -m"
+  },
   "dependencies": {
     "@chec/webhook-verifier": "^1.0.1",
     "@sendgrid/client": "^7.5.0",
     "@sendgrid/mail": "^7.5.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.31.1"
   }
 }

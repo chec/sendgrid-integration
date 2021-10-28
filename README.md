@@ -6,6 +6,21 @@ This integration does the following things:
 * Create transactional email templates in SendGrid, unless a template ID was provided for each email type
 * Assemble data for transactional emails and send them using the SendGrid API
 
+## Using this repo
+
+This repository runs in combination with the [integration-helper](https://github.com/chec/integration-helper). That
+repository provides context (e.g. merchant, API connectivity, integration info) and then runs the code in this
+repository.
+
+### Building
+
+When you make changes to this repository you will need to rebuild the dist files. For this, we use
+[`@vercel/ncc`](https://github.com/vercel/ncc):
+
+```
+npm run build
+```
+
 ## Email types
 
 * Customers: new order. Sent when a new order is placed, this is the order receipt the customer receives.
