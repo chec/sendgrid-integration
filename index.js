@@ -99,7 +99,7 @@ module.exports = async function handler(request, context) {
   switch (data.event) {
     // Runs once when an integration is first installed. Use this to control initial setup steps such as disabling
     // default emails in the Chec API, etc.
-    case 'integrations.create':
+    case 'integrations.ready':
       // Disable default emails in Chec
       context.api.put(`/v1/merchants/${merchantId}/notifications`, {
         customer: {

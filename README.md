@@ -2,7 +2,7 @@
 
 This integration does the following things:
 
-* Disable default Chec emails (on `integrations.create` event, first run only)
+* Disable default Chec emails (on `integrations.ready` event, first run only)
 * Create transactional email templates in SendGrid, unless a template ID was provided for each email type
 * Assemble data for transactional emails and send them using the SendGrid API
 
@@ -32,7 +32,7 @@ npm run build
 | Event | Action | Template |
 | -------------------------- | ----------------------------------- | ---------------------- |
 | `readiness.probe`          | API checking on readiness           | -                      |
-| `integrations.create`      | Initial setup                       | -                      |
+| `integrations.ready`       | Initial setup                       | -                      |
 | `orders.create`            | Send customer receipt               | "Order receipt"        |
 | `orders.physical.shipment` | Send customer shipment notification | "Item shipped"         |
 | `customers.login.token`    | Send customer login token           | "Customer login token" |
@@ -40,7 +40,7 @@ npm run build
 ## Initial setup
 
 When the integration first runs, it will run an initial setup phase. This is triggered by the event being
-"integrations.create", which only runs for an integration at the time it is created. We can assume the integration
+"integrations.ready", which only runs for an integration at the time it is created. We can assume the integration
 has been provisioned at this point, however DNS may not be available for it yet.
 
 The initial setup process does the following:
