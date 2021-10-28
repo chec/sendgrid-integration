@@ -13,7 +13,7 @@ const sendGridClient = require('@sendgrid/client');
  * @returns {string}
  */
 function getTemplateId(event, integration) {
-  const templateId = integration.config.sendgrid.templates[data.event] || '';
+  const templateId = integration.config.templates[data.event] || '';
   if (!templateId) {
     throw new Error(`Template ID is not available for event: ${data.event}`);
   }
