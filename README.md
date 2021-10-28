@@ -31,6 +31,7 @@ npm run build
 
 | Event | Action | Template |
 | -------------------------- | ----------------------------------- | ---------------------- |
+| `readiness.probe`          | API checking on readiness           | -                      |
 | `integrations.create`      | Initial setup                       | -                      |
 | `orders.create`            | Send customer receipt               | "Order receipt"        |
 | `orders.physical.shipment` | Send customer shipment notification | "Item shipped"         |

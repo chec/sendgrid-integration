@@ -67,6 +67,14 @@ module.exports = async function handler(request, context) {
   // Verify webhook authenticity
   verifyWebhook(request.body, context.webhookSigningKey);
 
+  // If it's a readiness probe, tell it we're good.
+  if (request.body.event === 'readiness.probe') {
+    return {
+      statusCode: 204,
+      body: '',
+    };
+  }
+
   // Fetch merchant and integration info
   const merchant = await context.merchant();
   const merchantId = merchant.id;
