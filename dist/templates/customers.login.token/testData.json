@@ -1,0 +1,75 @@
+{
+  "id": "...",
+  "created": 1634768366,
+  "event": "orders.create",
+  "response_code": 201,
+  "payload": {
+    "success": true,
+    "url": "https://mywebsite.com/token/1514b7be-bc8d-42f3-b9eb-b5aafe2da1f1"
+  },
+  "merchant": {
+    "id": 12345,
+    "status": "active",
+    "country": "US",
+    "currency": {
+      "symbol": "$",
+      "code": "USD"
+    },
+    "has": {
+      "logo": true,
+      "cover": false,
+      "analytics": false,
+      "enabled_hosted_checkouts": true,
+      "enabled_hosted_storefront": true,
+      "business_description": true
+    },
+    "support_email": "your.company.address@example.com",
+    "logo_shape": null,
+    "intercom": true,
+    "analytics": {
+      "google": {
+        "settings": {
+          "tracking_id": null,
+          "linked_domains": null
+        }
+      }
+    },
+    "address": {
+      "street": "123 Fake St",
+      "city": "San Francisco",
+      "region": "CA",
+      "country": "US",
+      "postal_zip_code": "94107",
+      "public": true
+    },
+    "billing": {
+      "has_payment_method": true,
+      "plan": "Standard"
+    },
+    "primary_interest": null,
+    "cors_domains": [],
+    "business_name": "Your Company",
+    "business_description": "<p><\/p>",
+    "logo": "https://cdn.chec.io/chec-assets/email/holo-on-dark.png",
+    "cover": null,
+    "images": {
+      "logo": {
+        "id": "ast_NXELwj19Qpl3A4",
+        "url": "https://cdn.chec.io/chec-assets/email/holo-on-dark.png",
+        "description": null,
+        "is_image": true,
+        "filename": "holo-on-dark.png",
+        "file_size": 30320,
+        "file_extension": "png",
+        "image_dimensions": {
+          "width": 400,
+          "height": 400
+        },
+        "meta": [],
+        "created_at": 1631554267,
+        "updated_at": 1631554270
+      },
+      "cover": null
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": "...",
+  "created": 1634768400,
+  "event": "orders.physical.shipment",
+  "response_code": 201,
+  "payload": {
+    "id": "shpmnt_RqEv5xd4k5Zz4j",
+    "order_id": "ord_bO6J5a8L17oEjA",
+    "order_customer_reference": "YRSTR-123456",
+    "shipping_method_id": "ship_ZM8X5nk47lpv4q",
+    "shipped_on": 1635292346,
+    "provider": "chec",
+    "provider_type": "native_shipping",
+    "carrier": "usps",
+    "carrier_name": "USPS",
+    "tracking_number": "ABC123-ZYX432",
+    "tracking_url": "https:\/\/tools.usps.com\/go\/TrackConfirmAction_input?qtc_tLabels1=ABC123-ZYX432",
+    "created": 1635292346,
+    "updated": 1635292346,
+    "meta": [],
+    "line_items": [
+      {
+        "fulfillment_item_id": "ful_RqEv5xd4k5Zz4j",
+        "line_item_id": "item_bO6J5a8O8AoEjp",
+        "shipping_method_id": "rate_8XO3wp7rxlYAzQ",
+        "product_id": "prod_4OANwRLdk5vYL8",
+        "product_name": "New Season T-shirt",
+        "selected_options": [],
+        "fulfilled_quantity": 2,
+        "total_quantity": 2
+      },
+      {
+        "fulfillment_item_id": "ful_RqEv5xd4k5Zz4Z",
+        "line_item_id": "item_A12JwrBOBywPjn",
+        "shipping_method_id": "rate_8XO3wp7rxlYAzQ",
+        "product_id": "prod_4WJvlKZMx5bYV1",
+        "product_name": "Sparkly Slippers",
+        "selected_options": [],
+        "fulfilled_quantity": 1,
+        "total_quantity": 1
+      }
+    ],
+    "customer": {
+      "id": "cstmr_7ZAMo1Q9ZxoNJ4",
+      "external_id": null,
+      "firstname": "Leslie",
+      "lastname": "Lawless",
+      "email": "some.customer.email@example.com",
+      "phone": null,
+      "meta": [],
+      "created": 1634768264,
+      "updated": 1634768264
+    }
+  },
+  "merchant": {
+    "id": 12345,
+    "status": "active",
+    "country": "US",
+    "currency": {
+      "symbol": "$",
+      "code": "USD"
+    },
+    "has": {
+      "logo": true,
+      "cover": false,
+      "analytics": false,
+      "enabled_hosted_checkouts": true,
+      "enabled_hosted_storefront": true,
+      "business_description": true
+    },
+    "support_email": "your.company.address@example.com",
+    "logo_shape": null,
+    "intercom": true,
+    "analytics": {
+      "google": {
+        "settings": {
+          "tracking_id": null,
+          "linked_domains": null
+        }
+      }
+    },
+    "address": {
+      "street": "123 Fake St",
+      "city": "San Francisco",
+      "region": "CA",
+      "country": "US",
+      "postal_zip_code": "94107",
+      "public": true
+    },
+    "billing": {
+      "has_payment_method": true,
+      "plan": "Standard"
+    },
+    "primary_interest": null,
+    "cors_domains": [],
+    "business_name": "Your Company",
+    "business_description": "<p><\/p>",
+    "logo": "https://cdn.chec.io/chec-assets/email/holo-on-dark.png",
+    "cover": null,
+    "images": {
+      "logo": {
+        "id": "ast_NXELwj19Qpl3A4",
+        "url": "https://cdn.chec.io/chec-assets/email/holo-on-dark.png",
+        "description": null,
+        "is_image": true,
+        "filename": "holo-on-dark.png",
+        "file_size": 30320,
+        "file_extension": "png",
+        "image_dimensions": {
+          "width": 400,
+          "height": 400
+        },
+        "meta": [],
+        "created_at": 1631554267,
+        "updated_at": 1631554270
+      },
+      "cover": null
+    }
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "id": "...",
+  "created": 1634768366,
+  "event": "orders.create",
+  "response_code": 201,
+  "payload": {
+    "version": "v1.5",
+    "sandbox": false,
+    "id": "ord_bO6J5a8L17oEjA",
+    "checkout_token_id": "chkt_OwmNG6nbbEZjxX",
+    "cart_id": "cart_9l6pkrRdrm8xRo",
+    "customer_reference": "YRSTR-123456",
+    "created": 1634768366,
+    "status": "open",
+    "status_payment": "paid",
+    "status_fulfillment": "not_fulfilled",
+    "currency": {
+      "code": "USD",
+      "symbol": "$"
+    },
+    "order_value": {
+      "raw": 68.16,
+      "formatted": "68.16",
+      "formatted_with_symbol": "$68.16",
+      "formatted_with_code": "68.16 USD"
+    },
+    "conditionals": {
+      "collected_fullname": true,
+      "collected_shipping_address": true,
+      "collected_billing_address": false,
+      "collected_extra_fields": true,
+      "collected_tax": true,
+      "collected_eu_vat_moss_evidence": false,
+      "has_physical_fulfillment": true,
+      "has_digital_fulfillment": false,
+      "has_extend_fulfillment": false,
+      "has_webhook_fulfillment": false,
+      "has_extend_apps": false,
+      "has_pay_what_you_want": false,
+      "has_discounts": false,
+      "has_subscription_items": false,
+      "is_free": false,
+      "is_fulfilled": false
+    },
+    "meta": [],
+    "redirect": false,
+    "collected": {
+      "fullname": true,
+      "shipping_address": true,
+      "billing_address": false,
+      "extra_fields": true,
+      "tax": true,
+      "eu_vat_moss_evidence": false
+    },
+    "has": {
+      "physical_fulfillment": true,
+      "digital_fulfillment": false,
+      "extend_fulfillment": false,
+      "webhook_fulfillment": false,
+      "extend_apps": false,
+      "pay_what_you_want": false,
+      "discounts": false,
+      "subscription_items": false
+    },
+    "is": {
+      "free": false,
+      "fulfilled": false
+    },
+    "order": {
+      "subtotal": {
+        "raw": 58.16,
+        "formatted": "58.16",
+        "formatted_with_symbol": "$58.16",
+        "formatted_with_code": "58.16 USD"
+      },
+      "total": {
+        "raw": 53.9,
+        "formatted": "53.90",
+        "formatted_with_symbol": "$53.90",
+        "formatted_with_code": "53.90 USD"
+      },
+      "total_with_tax": {
+        "raw": 68.16,
+        "formatted": "68.16",
+        "formatted_with_symbol": "$68.16",
+        "formatted_with_code": "68.16 USD"
+      },
+      "total_paid": {
+        "raw": 68.16,
+        "formatted": "68.16",
+        "formatted_with_symbol": "$68.16",
+        "formatted_with_code": "68.16 USD"
+      },
+      "adjustments": {
+        "taxable": {
+          "raw": 0,
+          "formatted": "0.00",
+          "formatted_with_symbol": "$0.00",
+          "formatted_with_code": "0.00 USD"
+        },
+        "untaxable": {
+          "raw": 0,
+          "formatted": "0.00",
+          "formatted_with_symbol": "$0.00",
+          "formatted_with_code": "0.00 USD"
+        },
+        "total": {
+          "raw": 0,
+          "formatted": "0.00",
+          "formatted_with_symbol": "$0.00",
+          "formatted_with_code": "0.00 USD"
+        }
+      },
+      "pay_what_you_want": {
+        "enabled": false,
+        "minimum": null,
+        "customer_set_price": null
+      },
+      "shipping": {
+        "id": "ship_8XO3wp7rxlYAzQ",
+        "description": "Express Delivery",
+        "provider": "chec",
+        "price": {
+          "raw": 10,
+          "formatted": "10.00",
+          "formatted_with_symbol": "$10.00",
+          "formatted_with_code": "10.00 USD"
+        }
+      },
+      "line_items": [
+        {
+          "id": "item_bO6J5a8O8AoEjp",
+          "product_id": "prod_4OANwRLdk5vYL8",
+          "product_name": "New Season T-shirt",
+          "product_sku": null,
+          "quantity": 2,
+          "price": {
+            "raw": 14.95,
+            "formatted": "14.95",
+            "formatted_with_symbol": "$14.95",
+            "formatted_with_code": "14.95 USD"
+          },
+          "line_total": {
+            "raw": 14.95,
+            "formatted": "14.95",
+            "formatted_with_symbol": "$14.95",
+            "formatted_with_code": "14.95 USD"
+          },
+          "line_total_with_tax": {
+            "raw": 16.15,
+            "formatted": "16.15",
+            "formatted_with_symbol": "$16.15",
+            "formatted_with_code": "16.15 USD"
+          },
+          "variant": null,
+          "selected_options": [],
+          "tax": {
+            "is_taxable": true,
+            "amount": {
+              "raw": 1.20,
+              "formatted": "1.20",
+              "formatted_with_symbol": "$1.20",
+              "formatted_with_code": "1.20 USD"
+            },
+            "taxable_amount": {
+              "raw": 14.95,
+              "formatted": "14.95",
+              "formatted_with_symbol": "$14.95",
+              "formatted_with_code": "14.95 USD"
+            },
+            "rate": 0.08,
+            "rate_percentage": "8%",
+            "breakdown": []
+          },
+          "image": {
+            "id": "ast_Kvg9l6mOq51bB7",
+            "url": "https://cdn.chec.io/chec-assets/email/holo-on-dark.png",
+            "description": null,
+            "is_image": true,
+            "filename": "holo-on-dark.png",
+            "file_size": 323759,
+            "file_extension": "png",
+            "image_dimensions": {
+              "width": 400,
+              "height": 400
+            },
+            "meta": [],
+            "created_at": 1510868528,
+            "updated_at": 1605932937
+          }
+        },
+        {
+          "id": "item_A12JwrBOBywPjn",
+          "product_id": "prod_4WJvlKZMx5bYV1",
+          "product_name": "Sparkly Slippers",
+          "product_sku": null,
+          "quantity": 1,
+          "price": {
+            "raw": 24,
+            "formatted": "24.00",
+            "formatted_with_symbol": "$24.00",
+            "formatted_with_code": "24.00 USD"
+          },
+          "line_total": {
+            "raw": 24,
+            "formatted": "24.00",
+            "formatted_with_symbol": "$24.00",
+            "formatted_with_code": "24.00 USD"
+          },
+          "line_total_with_tax": {
+            "raw": 25.86,
+            "formatted": "25.86",
+            "formatted_with_symbol": "$25.86",
+            "formatted_with_code": "25.86 USD"
+          },
+          "variant": null,
+          "selected_options": [],
+          "tax": {
+            "is_taxable": true,
+            "amount": {
+              "raw": 1.86,
+              "formatted": "1.86",
+              "formatted_with_symbol": "$1.86",
+              "formatted_with_code": "1.86 USD"
+            },
+            "taxable_amount": {
+              "raw": 24,
+              "formatted": "24.00",
+              "formatted_with_symbol": "$24.00",
+              "formatted_with_code": "24.00 USD"
+            },
+            "rate": 0.08,
+            "rate_percentage": "8%",
+            "breakdown": []
+          },
+          "image": null
+        }
+      ],
+      "discount": [],
+      "giftcard": []
+    },
+    "shipping": {
+      "name": "Leslie Lawless",
+      "street": "123 Fake St",
+      "street_2": null,
+      "town_city": "San Francisco",
+      "postal_zip_code": "94107",
+      "county_state": "CA",
+      "country": "US",
+      "meta": null
+    },
+    "billing": [],
+    "transactions": [],
+    "fulfillment": {
+      "physical": {
+        "items": [
+          {
+            "id": "ful_r2LM5QGy1mwZV1",
+            "shipping_method_id": "ship_8XO3wp7rxlYAzQ",
+            "line_item_id": "item_bO6J5a8O8AoEjp",
+            "product_id": "prod_4OANwRLdk5vYL8",
+            "shipping_description": "Express Delivery",
+            "provider": "chec",
+            "provider_type": "native_shipping",
+            "product_name": "Summer T-shirt",
+            "status": "not_fulfilled",
+            "quantity": {
+              "total": 2,
+              "fulfilled": 0,
+              "remaining": 2
+            },
+            "quantity_fulfilled": 0,
+            "quantity_remaining": 2,
+            "last_updated": 1634768367,
+            "linked_shipments": [],
+            "selected_options": []
+          }
+        ],
+        "shipments": []
+      },
+      "digital": {
+        "downloads": []
+      }
+    },
+    "customer": {
+      "id": "cstmr_7ZAMo1Q9ZxoNJ4",
+      "external_id": null,
+      "firstname": "Leslie",
+      "lastname": "Lawless",
+      "email": "some.customer.email@example.com",
+      "phone": null,
+      "meta": [],
+      "created": 1634768264,
+      "updated": 1634768264
+    },
+    "extra_fields": [],
+    "tax": {
+      "amount": {
+        "raw": 4.26,
+        "formatted": "4.26",
+        "formatted_with_symbol": "$4.26",
+        "formatted_with_code": "4.26 USD"
+      },
+      "included_in_price": false,
+      "provider": "chec",
+      "provider_type": "native",
+      "breakdown": [],
+      "zone": {
+        "country": "US",
+        "region": "CA",
+        "postal_zip_code": "94107",
+        "ip_address": null
+      }
+    },
+    "adjustments": []
+  },
+  "merchant": {
+    "id": 12345,
+    "status": "active",
+    "country": "US",
+    "currency": {
+      "symbol": "$",
+      "code": "USD"
+    },
+    "has": {
+      "logo": true,
+      "cover": false,
+      "analytics": false,
+      "enabled_hosted_checkouts": true,
+      "enabled_hosted_storefront": true,
+      "business_description": true
+    },
+    "support_email": "your.company.address@example.com",
+    "logo_shape": null,
+    "intercom": true,
+    "analytics": {
+      "google": {
+        "settings": {
+          "tracking_id": null,
+          "linked_domains": null
+        }
+      }
+    },
+    "address": {
+      "street": "123 Fake St",
+      "city": "San Francisco",
+      "region": "CA",
+      "country": "US",
+      "postal_zip_code": "94107",
+      "public": true
+    },
+    "billing": {
+      "has_payment_method": true,
+      "plan": "Standard"
+    },
+    "primary_interest": null,
+    "cors_domains": [],
+    "business_name": "Your Company",
+    "business_description": "<p><\/p>",
+    "logo": "https://cdn.chec.io/chec-assets/email/holo-on-dark.png",
+    "cover": null,
+    "images": {
+      "logo": {
+        "id": "ast_NXELwj19Qpl3A4",
+        "url": "https://cdn.chec.io/chec-assets/email/holo-on-dark.png",
+        "description": null,
+        "is_image": true,
+        "filename": "holo-on-dark.png",
+        "file_size": 30320,
+        "file_extension": "png",
+        "image_dimensions": {
+          "width": 400,
+          "height": 400
+        },
+        "meta": [],
+        "created_at": 1631554267,
+        "updated_at": 1631554270
+      },
+      "cover": null
+    }
+  }
+}
