@@ -35,7 +35,7 @@ npm run build
 | `integrations.create`      | Initial setup                       | -                      |
 | `orders.create`            | Send customer receipt               | "Order receipt"        |
 | `orders.physical.shipment` | Send customer shipment notification | "Item shipped"         |
-| TBC (CHEC-1794)            | Send customer login token           | "Customer login token" |
+| `customers.login.token`    | Send customer login token           | "Customer login token" |
 
 ## Initial setup
 
