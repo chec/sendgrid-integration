@@ -152,7 +152,10 @@ module.exports = async function handler(request, context) {
     case 'orders.create':
       await sendGridMail.send({
         to: data.payload.customer.email,
-        from: data.merchant.support_email, // must be verified in SendGrid before it can be used
+        from: {
+          email: data.merchant.support_email, // must be verified in SendGrid before it can be used
+          name: data.merchant.name,
+        },
         subject: `Your order: ${data.payload.customer_reference}`,
         dynamic_template_data: data,
         template_id: getTemplateId(data.event, integration),
