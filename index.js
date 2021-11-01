@@ -167,7 +167,10 @@ module.exports = async function handler(request, context) {
     case 'orders.physical.shipment':
       await sendGridMail.send({
         to: data.payload.customer.email,
-        from: data.merchant.support_email, // must be verified in SendGrid before it can be used
+        from: {
+          email: data.merchant.support_email, // must be verified in SendGrid before it can be used
+          name: data.merchant.name,
+        },
         subject: 'Your order has a new shipment!',
         dynamic_template_data: data,
         template_id: getTemplateId(data.event, integration),
@@ -179,7 +182,10 @@ module.exports = async function handler(request, context) {
     case 'customers.login.token':
       await sendGridMail.send({
         to: data.payload.email,
-        from: data.merchant.support_email, // must be verified in SendGrid before it can be used
+        from: {
+          email: data.merchant.support_email, // must be verified in SendGrid before it can be used
+          name: data.merchant.name,
+        },
         subject: 'Log in to your account',
         dynamic_template_data: data,
         template_id: getTemplateId(data.event, integration),
