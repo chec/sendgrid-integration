@@ -87,7 +87,7 @@ module.exports = async function handler(request, context) {
   };
 
   // Set up SendGrid mail client
-  const sendGridApiKey = integration.config.sendgrid.api_key || null;
+  const sendGridApiKey = integration.config.api_key || null;
   if (!sendGridApiKey) {
     throw new Error('SendGrid API key not available. Please check your configuration.');
   }
