@@ -1,6 +1,5 @@
 const { readFileSync } = require('fs');
 const { resolve } = require('path');
-const { verifyWebhook } = require('@chec/webhook-verifier');
 const sendGridMail = require('@sendgrid/mail');
 const sendGridClient = require('@sendgrid/client');
 
@@ -64,17 +63,6 @@ async function createTemplate(event, name, subject) {
 }
 
 module.exports = async function handler(request, context) {
-  // Verify webhook authenticity
-  verifyWebhook(request.body, context.webhookSigningKey);
-
-  // If it's a readiness probe, tell it we're good.
-  if (request.body.event === 'readiness.probe') {
-    return {
-      statusCode: 204,
-      body: '',
-    };
-  }
-
   // Fetch merchant and integration info
   const merchant = await context.merchant();
   const merchantId = merchant.id;
@@ -136,16 +124,8 @@ module.exports = async function handler(request, context) {
 
       // Wait for all of the templates to be built, then collect their IDs
       const templateIds = await Promise.all(promises);
-      // Format for the API
-      const integrationConfig = {
-        ...integration.config,
-        // Converts from [{event: 'foo', id: 'a-b-c'},...] to {foo: 'a-b-c', ...}
-        templates: templateIds.reduce((acc, value) => (acc[value.event] = value.id, acc), {}),
-      };
-      // Update in the API
-      result = await context.api.put(`/v1/integrations/${integration.id}`, {
-        config: integrationConfig,
-      });
+      // Converts from [{event: 'foo', id: 'a-b-c'},...] to {foo: 'a-b-c', ...}
+      context.store.set('templates', templateIds.reduce((acc, value) => (acc[value.event] = value.id, acc), {}));
       break;
 
     // Send "new order" email to customer
