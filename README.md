@@ -31,7 +31,6 @@ npm run build
 
 | Event | Action | Template |
 | -------------------------- | ----------------------------------- | ---------------------- |
-| `readiness.probe`          | API checking on readiness           | -                      |
 | `integrations.ready`       | Initial setup                       | -                      |
 | `orders.create`            | Send customer receipt               | "Order receipt"        |
 | `orders.physical.shipment` | Send customer shipment notification | "Item shipped"         |
@@ -40,8 +39,8 @@ npm run build
 ## Initial setup
 
 When the integration first runs, it will run an initial setup phase. This is triggered by the event being
-"integrations.ready", which only runs for an integration at the time it is created. We can assume the integration
-has been provisioned at this point, however DNS may not be available for it yet.
+"integrations.ready", which only runs for an integration at the time it is ready to be consumed. We can assume
+the integration has been provisioned at this point and DNS will be available.
 
 The initial setup process does the following:
 
