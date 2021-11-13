@@ -33,6 +33,7 @@ npm run build
 | -------------------------- | ----------------------------------- | ---------------------- |
 | `integrations.ready`       | Initial setup                       | -                      |
 | `orders.create`            | Send customer receipt               | "Order receipt"        |
+| `orders.receipt.resend`    | Send customer receipt (again)       | "Order receipt"        |
 | `orders.physical.shipment` | Send customer shipment notification | "Item shipped"         |
 | `customers.login.token`    | Send customer login token           | "Customer login token" |
 
