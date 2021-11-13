@@ -130,6 +130,7 @@ module.exports = async function handler(request, context) {
 
     // Send "new order" email to customer
     case 'orders.create':
+    case 'orders.receipt.resend':
       await sendGridMail.send({
         to: data.payload.customer.email,
         from: {
