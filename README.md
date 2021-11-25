@@ -1,5 +1,9 @@
 # SendGrid integration
 
+<p align="center">
+<img src="https://cdn.chec.io/chec-assets/integrations/sendgrid/sendgrid-cover.png" align="center" />
+</p>
+
 This integration does the following things:
 
 * Disable default Chec emails (on `integrations.ready` event, first run only)
