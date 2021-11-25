@@ -67,4 +67,4 @@ During a standard run of this integration, the following will happen:
 
 ## License
 
-This repository is proprietary.
+See [license](LICENSE.md).

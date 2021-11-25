@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:chec/sendgrid-integration.git",
   "author": "Robbie Averill <robbie@chec.io>",
-  "license": "Proprietary",
+  "license": "BSD-3-Clause",
   "private": true,
   "scripts": {
     "build": "ncc build index.js -o dist -m"
