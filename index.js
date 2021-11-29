@@ -102,7 +102,7 @@ module.exports = async function handler(request, context) {
 
       // Loop each event type
       const promises = [];
-      [
+      const templateConfig = [
         {
           event: 'customers.login.token',
           name: 'Customers: login token',
@@ -110,6 +110,7 @@ module.exports = async function handler(request, context) {
         },
         {
           event: 'orders.create',
+          eventAliases: ['orders.receipt.resend'],
           name: 'Orders: receipt',
           subject: 'Your order: {{ payload.customer_reference }}',
         },
@@ -118,7 +119,8 @@ module.exports = async function handler(request, context) {
           name: 'Orders: item shipped',
           subject: 'Your order has shipped!',
         },
-      ].forEach(({ event, name, subject }) => {
+      ];
+      templateConfig.forEach(({ event, name, subject }) => {
         promises.push(createTemplate(event, name, subject));
       });
 
@@ -126,6 +128,13 @@ module.exports = async function handler(request, context) {
       const templateIds = await Promise.all(promises);
       // Converts from [{event: 'foo', id: 'a-b-c'},...] to {foo: 'a-b-c', ...}
       const templates = templateIds.reduce((acc, value) => (acc[value.event] = value.id, acc), {});
+      // Add any template event aliases
+      templateConfig.forEach(({ event, eventAliases = [] }) => {
+        eventAliases.forEach((alias) => {
+          templates[alias] = templates[event];
+        });
+      });
+
       context.store.set('templates', templates);
       result = {
         installed: true,
