@@ -125,7 +125,12 @@ module.exports = async function handler(request, context) {
       // Wait for all of the templates to be built, then collect their IDs
       const templateIds = await Promise.all(promises);
       // Converts from [{event: 'foo', id: 'a-b-c'},...] to {foo: 'a-b-c', ...}
-      context.store.set('templates', templateIds.reduce((acc, value) => (acc[value.event] = value.id, acc), {}));
+      const templates = templateIds.reduce((acc, value) => (acc[value.event] = value.id, acc), {});
+      context.store.set('templates', templates);
+      result = {
+        installed: true,
+        templates,
+      };
       break;
 
     // Send "new order" email to customer
